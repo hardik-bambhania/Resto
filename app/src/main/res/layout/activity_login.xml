@@ -32,7 +32,7 @@
             android:textSize="18sp">
 
             <EditText
-                android:id="@+id/input_uname"
+                android:id="@+id/edTxt_uname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_uname"
@@ -48,7 +48,7 @@
             android:textSize="18sp">
 
             <EditText
-                android:id="@+id/input_password"
+                android:id="@+id/edTxt_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_password"
@@ -81,7 +81,7 @@
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/create_account"
+            android:id="@+id/btn_createAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
