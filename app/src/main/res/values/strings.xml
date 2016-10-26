@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Resto</string>
+    <string name="hint_name">Enter Name</string>
+    <string name="hint_uname">Enter Username</string>
+    <string name="hint_password">Enter Password</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="hint_contact">Enter Contact No.</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
