@@ -10,6 +10,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import com.be.msu.resto.R;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private ImageView mImageView;
     private Spinner mSpinnerService;
     private Button mBtnCreateAccount;
     private Button mBtnLogin;
@@ -38,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
 
         setToolbar();
 
+
         mSpinnerService = (Spinner) findViewById(R.id.spinner_service);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 LoginActivity.this,
@@ -47,9 +50,6 @@ public class LoginActivity extends AppCompatActivity {
 
         mEdTxtUsername = (EditText) findViewById(R.id.edTxt_uname);
         mEdtxtPassword = (EditText) findViewById(R.id.edTxt_password);
-
-        mBtnLogin = (Button) findViewById(R.id.btn_signup);
-        mBtnLogin.setOnClickListener(mLoginClickListener);
 
         mBtnCreateAccount = (Button) findViewById(R.id.btn_createAccount);
         mBtnCreateAccount.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +63,18 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        mBtnLogin = (Button) findViewById(R.id.btn_signup);
+        mBtnLogin.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
     }
 
 

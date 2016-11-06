@@ -4,7 +4,7 @@
     <string name="hint_uname">Enter Username</string>
     <string name="hint_password">Enter Password</string>
     <string name="login">Login</string>
-    <string name="create_account">Create Account</string>
+    <string name="create_account">Dont have an account?Sign Up</string>
     <string name="hint_contact">Enter Contact No.</string>
     <string name="sign_up">Sign Up</string>
 

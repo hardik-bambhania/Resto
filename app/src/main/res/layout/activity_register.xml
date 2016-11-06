@@ -1,6 +1,12 @@
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/img_login_background1">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <android.support.design.widget.AppBarLayout
@@ -13,82 +19,156 @@
             android:id="@+id/toolbar_register"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways"
-            android:background="@color/colorPrimary" />
+            android:background="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways" />
 
     </android.support.design.widget.AppBarLayout>
 
+        <!-- <ScrollView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_margin="16dp"
+             android:scrollbars="none">
+     -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="16dp"
         android:gravity="center"
         android:orientation="vertical">
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/input_layout_name"
+        <!--
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/flower1"
+                android:background="@drawable/circular_user_image"
+                />
+                -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:textSize="18sp">
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/input_name"
+            <ImageView
+                android:id="@+id/imgName"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/username" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_name"
-                android:singleLine="true"
-                android:textSize="18sp" />
-        </android.support.design.widget.TextInputLayout>
+                android:layout_margin="4dp"
+                android:textSize="18sp">
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/input_layout_uname"
+                <EditText
+                    android:id="@+id/input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_name"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:textSize="18sp">
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/uname"
+            <ImageView
+                android:id="@+id/imgUsername"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/username" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_uname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_uname"
-                android:singleLine="true"
-                android:textSize="18sp" />
-        </android.support.design.widget.TextInputLayout>
+                android:layout_margin="4dp"
+                android:textSize="18sp">
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/input_layout_pwd"
+                <EditText
+                    android:id="@+id/uname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_uname"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:textSize="18sp">
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/pwd"
+            <ImageView
+                android:id="@+id/imgPwd"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/username" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_pwd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_password"
-                android:singleLine="true"
-                android:textSize="18sp" />
-        </android.support.design.widget.TextInputLayout>
+                android:layout_margin="4dp"
+                android:textSize="18sp">
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/input_layout_contact"
+                <EditText
+                    android:id="@+id/pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_password"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:textSize="18sp">
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/contact"
+            <ImageView
+                android:id="@+id/imgContact"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/username" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_contact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_contact"
-                android:singleLine="true"
-                android:textSize="18sp"
-                android:inputType="phone" />
-        </android.support.design.widget.TextInputLayout>
+                android:layout_margin="4dp"
+                android:textSize="18sp">
+
+                <EditText
+                    android:id="@+id/contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_contact"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -115,5 +195,7 @@
             android:textSize="18sp" />
 
     </LinearLayout>
+        <!-- </ScrollView>-->
 
 </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
