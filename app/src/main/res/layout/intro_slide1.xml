@@ -12,10 +12,13 @@
         android:orientation="vertical"
         android:weightSum="1">
 
-        <ImageView
-            android:layout_width="@dimen/img_width_height"
-            android:layout_height="@dimen/img_width_height"
-            android:src="@drawable/circular_user_image" />
+
+        <com.be.msu.resto.bl.RoundedImageView
+            android:id="@+id/imageView_round"
+            android:src="@drawable/pic1"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginBottom="10dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -23,7 +26,8 @@
             android:text="@string/slide_1_title"
             android:textColor="@android:color/white"
             android:textSize="@dimen/slide_title"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:layout_width="wrap_content"

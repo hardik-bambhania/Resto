@@ -11,10 +11,12 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="@dimen/img_width_height"
-            android:layout_height="@dimen/img_width_height"
-            android:src="@drawable/circular_user_image" />
+        <com.be.msu.resto.bl.RoundedImageView
+            android:id="@+id/imageView_round"
+            android:src="@drawable/pic1"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginBottom="10dp" />
 
         <TextView
             android:layout_width="wrap_content"

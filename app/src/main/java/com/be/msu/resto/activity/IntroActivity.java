@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -25,6 +26,7 @@ import com.be.msu.resto.R;
  */
 public class IntroActivity extends AppCompatActivity {
 
+    private ImageView roundImageView;
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
     private LinearLayout dotsLayout;
@@ -44,6 +46,10 @@ public class IntroActivity extends AppCompatActivity {
             finish();
         }
 
+        roundImageView = (ImageView) findViewById(R.id.imageView_round);
+        //Bitmap icon = BitmapFactory.decodeResource(getResources(),R.drawable.ic_launcher);
+
+        //sroundImageView.setImageBitmap(icon);
         // Making notification bar transparent
         if (Build.VERSION.SDK_INT >= 21) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
