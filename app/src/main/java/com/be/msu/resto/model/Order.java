@@ -1,11 +1,14 @@
 package com.be.msu.resto.model;
 
+import java.util.ArrayList;
+
 public class Order {
-    int id;
-    int price;
-    String dateTime;
-    int numberOfItem;
-    boolean isVegetarian;
+    private int id;
+    private int totalPrice;
+    private String dateTime;
+    private int numberOfItem;
+    private boolean isVegetarian;
+    private ArrayList<MenuItem> orderedItem;
 
     public int getId() {
         return id;
@@ -15,12 +18,12 @@ public class Order {
         this.id = id;
     }
 
-    public int getPrice() {
-        return price;
+    public int getTotalPrice() {
+        return totalPrice;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
     public String getDateTime() {
@@ -45,5 +48,13 @@ public class Order {
 
     public void setVegetarian(boolean vegetarian) {
         isVegetarian = vegetarian;
+    }
+
+    public ArrayList<MenuItem> getOrderedItem() {
+        return orderedItem;
+    }
+
+    public void setOrderedItem(ArrayList<MenuItem> mOrderedItem) {
+        this.orderedItem = mOrderedItem;
     }
 }

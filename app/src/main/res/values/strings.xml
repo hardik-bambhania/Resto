@@ -29,4 +29,15 @@
     <string name="slide_4_title">World Travel</string>
     <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
 
+
+    <!--Navigation Drawer-->
+    <string name="my_order">My Order</string>
+    <string name="add_order">Add Order</string>
+    <string name="view_menu">View Menu</string>
+    <string name="feedback">Feedback</string>
+
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+
+
 </resources>

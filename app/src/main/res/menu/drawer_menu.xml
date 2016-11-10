@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_my_order"
+        android:icon="@drawable/ic_menu_my_order"
+        android:checked="false"
+        android:title="@string/my_order" />
+
+    <item
+        android:id="@+id/menu_add_order"
+        android:icon="@drawable/ic_menu_add_order"
+        android:checked="false"
+        android:title="@string/add_order" />
+
+    <item
+        android:id="@+id/menu_view_menu"
+        android:icon="@drawable/ic_menu_view_menu"
+        android:checked="false"
+        android:title="@string/view_menu" />
+
+
+    <item
+        android:id="@+id/menu_feedback"
+        android:checked="false"
+        android:icon="@drawable/ic_menu_feedback"
+        android:title="@string/feedback" />
+
+</menu>
