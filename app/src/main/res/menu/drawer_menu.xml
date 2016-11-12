@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/menu_my_order"
-        android:icon="@drawable/ic_menu_my_order"
+        android:icon="@drawable/ic_menu_add_order"
         android:checked="false"
         android:title="@string/my_order" />
 

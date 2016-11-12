@@ -1,5 +1,6 @@
 package com.be.msu.resto.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -53,6 +54,8 @@ public class RegisterActivity extends AppCompatActivity {
                 password = epassword.getText().toString();
                 contact_no = econtact.getText().toString();
 
+                Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
+                startActivity(intent);
             }
         });
     }
