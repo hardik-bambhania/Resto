@@ -14,6 +14,9 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.be.msu.resto.R;
+import com.be.msu.resto.fragment.AddOrderFragment;
+import com.be.msu.resto.fragment.HomeFragment;
+import com.be.msu.resto.fragment.ViewMenuFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -56,10 +59,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         };
         mDrawerLayout.addDrawerListener(actionBarDrawerToggle);
-
-
         actionBarDrawerToggle.syncState();
-
     }
 
     private final NavigationView.OnNavigationItemSelectedListener mNavigationItemClickListener = new NavigationView.OnNavigationItemSelectedListener() {
@@ -68,14 +68,19 @@ public class HomeActivity extends AppCompatActivity {
             item.setChecked(true);
             switch (item.getItemId()) {
                 case R.id.menu_my_order:
-                    item.setChecked(true);
                     mDrawerLayout.closeDrawers();
+                    HomeFragment homeFragment = new HomeFragment();
+                    loadFragment(homeFragment);
                     break;
                 case R.id.menu_add_order:
                     mDrawerLayout.closeDrawers();
+                    AddOrderFragment addOrderFragment = new AddOrderFragment();
+                    loadFragment(addOrderFragment);
                     break;
                 case R.id.menu_view_menu:
                     mDrawerLayout.closeDrawers();
+                    ViewMenuFragment viewMenuFragment = new ViewMenuFragment();
+                    loadFragment(viewMenuFragment);
                     break;
                 case R.id.menu_feedback:
                     mDrawerLayout.closeDrawers();
@@ -96,7 +101,7 @@ public class HomeActivity extends AppCompatActivity {
     private void loadFragment(Fragment fragment) {
         final FragmentManager fragmentManager = getSupportFragmentManager();
         final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.home_container, fragment);
+        fragmentTransaction.replace(R.id.home_container, fragment);
         fragmentTransaction.commit();
     }
 }

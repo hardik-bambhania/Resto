@@ -1,4 +1,4 @@
-package com.be.msu.resto.activity;
+package com.be.msu.resto.fragment;
 
 
 import android.os.Bundle;
