@@ -20,9 +20,9 @@ import java.util.ArrayList;
 public class RegisterActivity extends AppCompatActivity {
 
     private Spinner mSpinnerService;
-    private Button sign_up;
-    private String name = "", username = "", password = "", service = "", contact_no = "", result1;
-    private EditText ename, eusername, epassword, econtact;
+    private Button mBtnSignUp;
+    private String mUserName = "", mPassword = "", mService = "", mContactNumber = "", mResult;
+    private EditText mEdTxtUserName, mEdTxtPassword, mEdTxtContact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,22 +37,19 @@ public class RegisterActivity extends AppCompatActivity {
         mSpinnerService.setAdapter(adapter);
         mSpinnerService.setOnItemSelectedListener(mServiceSelectListener);
 
-        ename = (EditText) findViewById(R.id.input_name);
-        eusername = (EditText) findViewById(R.id.uname);
-        epassword = (EditText) findViewById(R.id.pwd);
-        econtact = (EditText) findViewById(R.id.contact);
+        mEdTxtUserName = (EditText) findViewById(R.id.edTxt_uname);
+        mEdTxtPassword = (EditText) findViewById(R.id.edTxt_pwd);
+        mEdTxtContact = (EditText) findViewById(R.id.edTxt_contact);
 
 
-        sign_up = (Button) findViewById(R.id.btn_signup);
-        sign_up.setOnClickListener(new View.OnClickListener() {
+        mBtnSignUp = (Button) findViewById(R.id.btn_signup);
+        mBtnSignUp.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
-                name = ename.getText().toString();
-                username = eusername.getText().toString();
-                password = epassword.getText().toString();
-                contact_no = econtact.getText().toString();
+                mUserName = mEdTxtUserName.getText().toString();
+                mPassword = mEdTxtPassword.getText().toString();
+                mContactNumber = mEdTxtContact.getText().toString();
 
                 Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
                 startActivity(intent);
@@ -66,8 +63,7 @@ public class RegisterActivity extends AppCompatActivity {
         @Override
         public void onItemSelected(AdapterView<?> parent, View view,
                                    int position, long id) {
-            // TODO Auto-generated method stub
-            service = mSpinnerService.getSelectedItem().toString();
+            mService = mSpinnerService.getSelectedItem().toString();
         }
 
         @Override

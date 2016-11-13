@@ -61,8 +61,7 @@ public class LVCircularSmile extends View {
         rectF = new RectF(mPadding, mPadding, mWidth - mPadding, mWidth - mPadding);
         mPaint.setStyle(Paint.Style.STROKE);
 
-        canvas.drawArc(rectF, startAngle, 180
-                , false, mPaint);//第四个参数是否显示半径
+        canvas.drawArc(rectF, startAngle, 180, false, mPaint);
 
         mPaint.setStyle(Paint.Style.FILL);
         if (isSmile) {
@@ -78,7 +77,7 @@ public class LVCircularSmile extends View {
         mPaint.setAntiAlias(true);
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setColor(Color.WHITE);
-        mPaint.setStrokeWidth(dip2px(2));
+        mPaint.setStrokeWidth(dip2px(4));
 
     }
 
