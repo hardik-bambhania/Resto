@@ -37,14 +37,15 @@
                 android:id="@+id/img_uname"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
+                android:layout_marginTop="6dp"
                 android:src="@drawable/ic_username" />
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_uname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:textSize="18sp">
 
                 <EditText
@@ -67,14 +68,15 @@
                 android:id="@+id/img_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginTop="6dp"
                 android:src="@drawable/ic_password" />
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_pwd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:textSize="18sp">
 
                 <EditText
@@ -97,14 +99,15 @@
                 android:id="@+id/img_contact"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
+                android:layout_marginTop="6dp"
                 android:src="@drawable/ic_contact_number" />
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_contact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:textSize="18sp">
 
                 <EditText
@@ -121,7 +124,9 @@
         <Spinner
             android:id="@+id/spinner_service"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/border_spinner"
             android:textSize="18sp" />
 
@@ -129,7 +134,8 @@
             android:id="@+id/btn_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:background="@color/colorPrimary"
             android:text="@string/sign_up"
             android:textColor="@android:color/white"

@@ -111,7 +111,7 @@ public class LVCircularSmile extends View {
         valueAnimator = ValueAnimator.ofFloat(startF, endF);
         valueAnimator.setDuration(time);
         valueAnimator.setInterpolator(new LinearInterpolator());
-        valueAnimator.setRepeatCount(ValueAnimator.INFINITE);//无限循环
+        valueAnimator.setRepeatCount(ValueAnimator.INFINITE);
         valueAnimator.setRepeatMode(ValueAnimator.RESTART);
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
