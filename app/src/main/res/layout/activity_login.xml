@@ -89,23 +89,23 @@
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
-
-        <Spinner
-            android:id="@+id/spinner_service"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/border_spinner"
-            android:textSize="18sp" />
-
+        <!--
+                <Spinner
+                    android:id="@+id/spinner_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/border_spinner"
+                    android:textSize="18sp" />
+        -->
         <Button
             android:id="@+id/btn_signup"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:background="@drawable/round_button"
             android:padding="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:text="@string/login"
             android:textColor="@android:color/white"

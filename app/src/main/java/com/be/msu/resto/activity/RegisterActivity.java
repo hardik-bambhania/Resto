@@ -5,16 +5,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.be.msu.resto.R;
-
-import java.util.ArrayList;
 
 
 public class RegisterActivity extends AppCompatActivity {
@@ -31,12 +26,12 @@ public class RegisterActivity extends AppCompatActivity {
 
         setToolbar();
 
-        mSpinnerService = (Spinner) findViewById(R.id.spinner_service);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(RegisterActivity.this,
+        //  mSpinnerService = (Spinner) findViewById(R.id.spinner_service);
+      /*  ArrayAdapter<String> adapter = new ArrayAdapter<String>(RegisterActivity.this,
                 android.R.layout.simple_dropdown_item_1line, getServicelist());
         mSpinnerService.setAdapter(adapter);
         mSpinnerService.setOnItemSelectedListener(mServiceSelectListener);
-
+*/
         mEdTxtUserName = (EditText) findViewById(R.id.edTxt_uname);
         mEdTxtPassword = (EditText) findViewById(R.id.edTxt_pwd);
         mEdTxtContact = (EditText) findViewById(R.id.edTxt_contact);
@@ -57,7 +52,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
-
+/*
     private final OnItemSelectedListener mServiceSelectListener = new OnItemSelectedListener() {
 
         @Override
@@ -71,14 +66,14 @@ public class RegisterActivity extends AppCompatActivity {
             // TODO Auto-generated method stub
 
         }
-    };
+    };*/
 
     private void setToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_register);
         toolbar.setTitle(getString(R.string.sign_up));
         setSupportActionBar(toolbar);
     }
-
+/*
     private ArrayList<String> getServicelist() {
         ArrayList<String> list = new ArrayList<String>();
         list.add("Admin");
@@ -87,5 +82,5 @@ public class RegisterActivity extends AppCompatActivity {
         list.add("Cook");
         list.add("Waiter");
         return list;
-    }
+    }*/
 }

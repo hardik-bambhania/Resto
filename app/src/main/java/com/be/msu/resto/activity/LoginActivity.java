@@ -5,17 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
 import com.be.msu.resto.R;
-
-import java.util.ArrayList;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -41,12 +36,12 @@ public class LoginActivity extends AppCompatActivity {
         setToolbar();
 
 
-        mSpinnerService = (Spinner) findViewById(R.id.spinner_service);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+        //mSpinnerService = (Spinner) findViewById(R.id.spinner_service);
+       /* ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 LoginActivity.this,
-                android.R.layout.simple_dropdown_item_1line, getServiceList());
-        mSpinnerService.setAdapter(adapter);
-        mSpinnerService.setOnItemSelectedListener(mServiceSelectListener);
+                android.R.layout.simple_dropdown_item_1line, getServiceList());*/
+        // mSpinnerService.setAdapter(adapter);
+        //mSpinnerService.setOnItemSelectedListener(mServiceSelectListener);
 
         mEdTxtUsername = (EditText) findViewById(R.id.edTxt_uname);
         mEdtxtPassword = (EditText) findViewById(R.id.edTxt_password);
@@ -88,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
             mPassword = mEdtxtPassword.getText().toString();
         }
     };
-
+/*
     private final OnItemSelectedListener mServiceSelectListener = new OnItemSelectedListener() {
 
         @Override
@@ -103,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
             // TODO Auto-generated method stub
 
         }
-    };
+    };*/
 
     /**
      * Set Toolbar
@@ -119,6 +114,7 @@ public class LoginActivity extends AppCompatActivity {
      *
      * @return List of services.
      */
+/*
     private ArrayList<String> getServiceList() {
         ArrayList<String> list = new ArrayList<String>();
         list.add("Admin");
@@ -127,5 +123,5 @@ public class LoginActivity extends AppCompatActivity {
         list.add("Cook");
         list.add("Waiter");
         return list;
-    }
+    }*/
 }
