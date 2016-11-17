@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.be.msu.resto.R;
+import com.be.msu.resto.bl.RegistrationDBHandler;
+import com.be.msu.resto.model.RegistrationCredentials;
 
 
 public class RegisterActivity extends AppCompatActivity {
@@ -18,13 +20,14 @@ public class RegisterActivity extends AppCompatActivity {
     private Button mBtnSignUp;
     private String mUserName = "", mPassword = "", mService = "", mContactNumber = "", mResult;
     private EditText mEdTxtUserName, mEdTxtPassword, mEdTxtContact;
-
+    private RegistrationDBHandler db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
         setToolbar();
+        db = new RegistrationDBHandler(this);
 
         //  mSpinnerService = (Spinner) findViewById(R.id.spinner_service);
       /*  ArrayAdapter<String> adapter = new ArrayAdapter<String>(RegisterActivity.this,
@@ -45,6 +48,10 @@ public class RegisterActivity extends AppCompatActivity {
                 mUserName = mEdTxtUserName.getText().toString();
                 mPassword = mEdTxtPassword.getText().toString();
                 mContactNumber = mEdTxtContact.getText().toString();
+                /*
+                insert data into Database
+                 */
+                db.addCredentials(new RegistrationCredentials(mUserName, mPassword));
 
                 Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
                 startActivity(intent);
