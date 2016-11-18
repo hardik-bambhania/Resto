@@ -7,19 +7,22 @@ public class RegistrationCredentials {
     int id;
     String username;
     String password;
+    String contact;
 
     public RegistrationCredentials() {
     }
 
-    public RegistrationCredentials(int id, String username, String password) {
+    public RegistrationCredentials(int id, String username, String password, String contact) {
         this.id = id;
         this.username = username;
         this.password = password;
+        this.contact = contact;
     }
 
-    public RegistrationCredentials(String username, String password) {
+    public RegistrationCredentials(String username, String password, String contact) {
         this.username = username;
         this.password = password;
+        this.contact = contact;
     }
 
     public int getId() {
@@ -46,4 +49,11 @@ public class RegistrationCredentials {
         this.password = password;
     }
 
+    public String getContactNo() {
+        return this.contact;
+    }
+
+    public void setContactNo(String contact) {
+        this.contact = contact;
+    }
 }

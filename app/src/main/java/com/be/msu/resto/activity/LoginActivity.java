@@ -1,6 +1,7 @@
 package com.be.msu.resto.activity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -9,8 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.be.msu.resto.R;
+import com.be.msu.resto.bl.RegistrationDBHandler;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -26,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     private String result1;
     private String bookingDetails;
     private String deleteData;
-
+    private RegistrationDBHandler db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
 
         setToolbar();
 
+        db = new RegistrationDBHandler(this);
 
         //mSpinnerService = (Spinner) findViewById(R.id.spinner_service);
        /* ArrayAdapter<String> adapter = new ArrayAdapter<String>(
@@ -64,9 +68,15 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                startActivity(intent);
-                finish();
+                Cursor cursor = db.getRegistrationCredentials(mEdTxtUsername.toString(), mEdtxtPassword.toString());
+                if (cursor.moveToFirst()) {
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Incorrect data", Toast.LENGTH_SHORT).show();
+                }
+
 
             }
         });

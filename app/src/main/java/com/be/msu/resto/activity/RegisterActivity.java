@@ -51,9 +51,9 @@ public class RegisterActivity extends AppCompatActivity {
                 /*
                 insert data into Database
                  */
-                db.addCredentials(new RegistrationCredentials(mUserName, mPassword));
+                db.addCredentials(new RegistrationCredentials(mUserName, mPassword, mContactNumber));
 
-                Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
