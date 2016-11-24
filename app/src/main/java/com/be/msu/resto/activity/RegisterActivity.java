@@ -1,6 +1,7 @@
 package com.be.msu.resto.activity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.be.msu.resto.R;
 import com.be.msu.resto.bl.RegistrationDBHandler;
@@ -51,10 +53,16 @@ public class RegisterActivity extends AppCompatActivity {
                 /*
                 insert data into Database
                  */
-                db.addCredentials(new RegistrationCredentials(mUserName, mPassword, mContactNumber));
+                Cursor cursor = db.getRegistrationCredentials(mUserName, mPassword);
+                if (cursor.moveToFirst()) {
+                    Toast.makeText(getApplicationContext(), "Username or Password already exists", Toast.LENGTH_SHORT).show();
+                } else {
+                    db.addCredentials(new RegistrationCredentials(mUserName, mPassword, mContactNumber));
+                    Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                }
 
-                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                startActivity(intent);
+
             }
         });
     }

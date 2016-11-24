@@ -68,13 +68,18 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Cursor cursor = db.getRegistrationCredentials(mEdTxtUsername.toString(), mEdtxtPassword.toString());
+                Cursor cursor = db.getRegistrationCredentials(mEdTxtUsername.getText().toString(), mEdtxtPassword.getText().toString());
                 if (cursor.moveToFirst()) {
+                    String uname = cursor.getString(1);
+                    //String pwd = cursor.getString(2);
+//                    Toast.makeText(getApplicationContext(), "uname=" + uname+" AND password="+pwd, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "uname=" + uname, Toast.LENGTH_SHORT).show();
+
                     Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                     startActivity(intent);
                     finish();
                 } else {
-                    Toast.makeText(getApplicationContext(), "Incorrect data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Username or Password is Incorrect", Toast.LENGTH_SHORT).show();
                 }
 
 
