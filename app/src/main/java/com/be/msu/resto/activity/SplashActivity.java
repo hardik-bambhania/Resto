@@ -32,7 +32,7 @@ public class SplashActivity extends AppCompatActivity {
         protected Object doInBackground(Object[] params) {
             try {
                 //Perform Sync operation here
-                Thread.sleep(15000);
+                Thread.sleep(1500);
             } catch (Exception e) {
                 Log.e(TAG, "Error in sync task : " + e.getMessage(), e);
             }
