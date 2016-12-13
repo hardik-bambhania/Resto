@@ -7,6 +7,7 @@ public class MenuItem {
     private String name;
     private int price;
     private int noOfItem;
+    private int img;
 
     public int getId() {
         return id;
@@ -14,6 +15,14 @@ public class MenuItem {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getImage() {
+        return img;
+    }
+
+    public void setImage(int img) {
+        this.img = img;
     }
 
     public String getCategory() {
