@@ -1,4 +1,4 @@
-package com.be.msu.resto.bl;
+package com.be.msu.resto.adapter;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.be.msu.resto.R;
-import com.be.msu.resto.fragment.ViewItemFragment;
+import com.be.msu.resto.fragment.FoodItemListFragment;
 import com.be.msu.resto.model.MenuCategory;
 
 import java.util.List;
@@ -21,13 +21,13 @@ import java.util.List;
 /**
  * Created by TANKBHAI on 28-11-2016.
  */
-public class ViewMenuCategoryAdapter extends RecyclerView.Adapter<ViewMenuCategoryAdapter.ViewHolder> {
+public class FoodItemCategoryAdapter extends RecyclerView.Adapter<FoodItemCategoryAdapter.ViewHolder> {
 
     List<MenuCategory> list;
     public Bundle bundle;
+    private static final String CATEGORY_CODE = "categoryCode";
 
-
-    public ViewMenuCategoryAdapter(List<MenuCategory> menuCategoryList) {
+    public FoodItemCategoryAdapter(List<MenuCategory> menuCategoryList) {
         super();
         list = menuCategoryList;
     }
@@ -37,21 +37,21 @@ public class ViewMenuCategoryAdapter extends RecyclerView.Adapter<ViewMenuCatego
         @Override
         public void onClick(View v) {
 
-            ViewItemFragment viewItemFragment = new ViewItemFragment();
+            FoodItemListFragment foodItemListFragment = new FoodItemListFragment();
             final FragmentManager fragmentManager = ((AppCompatActivity) v.getContext()).getSupportFragmentManager();
             final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.home_container, viewItemFragment);
+            fragmentTransaction.replace(R.id.home_container, foodItemListFragment);
             fragmentTransaction.commit();
 
             bundle = new Bundle();
             TextView categoryName = (TextView) ((CardView) v).findViewById(R.id.category_name);
+
             if ((categoryName.getText()).equals("Gujarati")) {
-                bundle.putInt("categoryCode", 1);
+                bundle.putInt(CATEGORY_CODE, 1);
             } else if ((categoryName.getText()).equals("Punjabi")) {
-                bundle.putInt("categoryCode", 2);
+                bundle.putInt(CATEGORY_CODE, 2);
             }
-            //bundle.putString("categoryName",categoryName.getText().toString());
-            viewItemFragment.setArguments(bundle);
+            foodItemListFragment.setArguments(bundle);
         }
     };
     @Override

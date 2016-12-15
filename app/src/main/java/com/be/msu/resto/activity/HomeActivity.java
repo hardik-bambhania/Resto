@@ -15,8 +15,8 @@ import android.view.View;
 
 import com.be.msu.resto.R;
 import com.be.msu.resto.fragment.AddOrderFragment;
+import com.be.msu.resto.fragment.FoodMenuFragment;
 import com.be.msu.resto.fragment.HomeFragment;
-import com.be.msu.resto.fragment.ViewMenuFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -79,12 +79,12 @@ public class HomeActivity extends AppCompatActivity {
                     break;
                 case R.id.menu_view_menu:
                     mDrawerLayout.closeDrawers();
-                    ViewMenuFragment viewMenuFragment = new ViewMenuFragment();
-                    loadFragment(viewMenuFragment);
-                    /*viewMenuFragment.cardView.setOnClickListener(new View.OnClickListener() {
+                    FoodMenuFragment foodMenuFragment = new FoodMenuFragment();
+                    loadFragment(foodMenuFragment);
+                    /*foodMenuFragment.cardView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            ViewItemFragment viewItemFragment = new ViewItemFragment();
+                            FoodItemListFragment viewItemFragment = new FoodItemListFragment();
                             loadFragment(viewItemFragment);
                         }
                     });*/

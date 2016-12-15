@@ -20,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.be.msu.resto.R;
+import com.be.msu.resto.bl.PrefManager;
 
 /**
  * Created by TANKBHAI on 09-11-2016.

@@ -16,7 +16,7 @@ import android.view.animation.LinearInterpolator;
  * Created by lumingmin on 16/6/20.
  */
 
-public class LVCircularSmile extends View {
+public class CircularSmileProgressView extends View {
 
     private Paint mPaint;
 
@@ -28,15 +28,15 @@ public class LVCircularSmile extends View {
     private boolean isSmile = false;
     RectF rectF = new RectF();
 
-    public LVCircularSmile(Context context) {
+    public CircularSmileProgressView(Context context) {
         this(context, null);
     }
 
-    public LVCircularSmile(Context context, AttributeSet attrs) {
+    public CircularSmileProgressView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public LVCircularSmile(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CircularSmileProgressView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initPaint();
     }

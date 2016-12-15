@@ -21,7 +21,7 @@
         android:textColor="@android:color/white"
         android:textSize="48sp" />
 
-    <com.be.msu.resto.bl.LVCircularSmile
+    <com.be.msu.resto.bl.CircularSmileProgressView
         android:id="@+id/lv_circularSmile"
         android:layout_width="90dp"
         android:layout_height="90dp"

@@ -1,4 +1,4 @@
-package com.be.msu.resto.activity;
+package com.be.msu.resto.bl;
 
 import android.content.Context;
 import android.content.SharedPreferences;

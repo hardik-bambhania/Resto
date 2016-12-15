@@ -6,14 +6,14 @@
     android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar_resto"
+        android:id="@+id/appbar_view_menu"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/collapsing_toolbar_resto"
+            android:id="@+id/collapsing_toolbar_view_menu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
@@ -21,7 +21,7 @@
             app:contentScrim="@color/colorPrimary">
 
             <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar_collapsing_resto"
+                android:id="@+id/toolbar_view_menu"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
@@ -30,7 +30,7 @@
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/recycler_food_menu"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"></android.support.v7.widget.RecyclerView>

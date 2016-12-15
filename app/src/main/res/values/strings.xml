@@ -37,5 +37,15 @@
     <string name="drawer_open">open</string>
     <string name="drawer_close">close</string>
 
+    <!-- Menu Category -->
+    <string name="gujarati">Gujarati</string>
+    <string name="punjabi">Punjabi</string>
+    <string name="chinese">Chinese</string>
+    <string name="pizza">Pizza</string>
+
+    <!-- Menu items -->
+    <string name="paneer_angara">Paneer Angara</string>
+    <string name="paneer_tikka_masala">Paneer Tikka Masala</string>
+    <string name="masala_bhindi">Masala Bhindi</string>
 
 </resources>

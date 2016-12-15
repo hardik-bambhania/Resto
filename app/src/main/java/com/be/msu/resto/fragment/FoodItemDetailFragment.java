@@ -2,7 +2,6 @@ package com.be.msu.resto.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,17 +13,16 @@ import com.be.msu.resto.R;
 /**
  * Created by TANKBHAI on 30-11-2016.
  */
-public class ViewItemDetailFragment extends Fragment {
-    private RecyclerView recyclerView;
-    private RecyclerView.LayoutManager layoutManager;
-    private TextView mCategoryName, mItemName, mRupees, mDesc;
+public class FoodItemDetailFragment extends Fragment {
+
+    private TextView mTxtCategoryName, mTxtItemName, mTxtRupees, mTxtDesc;
     private RatingBar mRatingBar;
 
     private String categoryName, itemName, rupees;
     private Float rating;
     private int itemCode;
 
-    public ViewItemDetailFragment() {
+    public FoodItemDetailFragment() {
     }
 
     @Override
@@ -37,14 +35,14 @@ public class ViewItemDetailFragment extends Fragment {
         rupees = getArguments().getString("Rupees");
         rating = getArguments().getFloat("Rating");
 
-        mCategoryName = (TextView) view.findViewById(R.id.category_name);
-        mItemName = (TextView) view.findViewById(R.id.item_name);
-        mRupees = (TextView) view.findViewById(R.id.rupees);
+        mTxtCategoryName = (TextView) view.findViewById(R.id.category_name);
+        mTxtItemName = (TextView) view.findViewById(R.id.item_name);
+        mTxtRupees = (TextView) view.findViewById(R.id.rupees);
         mRatingBar = (RatingBar) view.findViewById(R.id.ratingBar);
 
-        mCategoryName.setText(categoryName);
-        mItemName.setText(itemName);
-        mRupees.setText(rupees);
+        mTxtCategoryName.setText(categoryName);
+        mTxtItemName.setText(itemName);
+        mTxtRupees.setText(rupees);
         mRatingBar.setRating(rating);
 
         return view;

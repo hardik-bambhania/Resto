@@ -12,22 +12,22 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.be.msu.resto.R;
-import com.be.msu.resto.bl.ViewMenuCategoryAdapter;
+import com.be.msu.resto.adapter.FoodItemCategoryAdapter;
 import com.be.msu.resto.model.MenuCategory;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class ViewMenuFragment extends Fragment {
+public class FoodMenuFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
-    private ViewMenuCategoryAdapter mAdapter;
+    private FoodItemCategoryAdapter mAdapter;
     private List<MenuCategory> list = new ArrayList<>();
     public CardView cardView;
 
-    public ViewMenuFragment() {
+    public FoodMenuFragment() {
     }
 
 
@@ -35,11 +35,11 @@ public class ViewMenuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_view_menu, container, false);
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recycler_food_menu);
         recyclerView.setHasFixedSize(true);
 
         layoutManager = new LinearLayoutManager(getActivity());
-        mAdapter = new ViewMenuCategoryAdapter(list);
+        mAdapter = new FoodItemCategoryAdapter(list);
 
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(mAdapter);
@@ -50,35 +50,30 @@ public class ViewMenuFragment extends Fragment {
         return view;
     }
 
-    public void prepareCategoryList() {
+    /**
+     * This method is used to create dummy food category list
+     */
+
+    private void prepareCategoryList() {
         MenuCategory gujrati = new MenuCategory();
         gujrati.setImage(R.mipmap.img_login_background2);
-        gujrati.setmCategory("Gujarati");
+        gujrati.setmCategory("" + getText(R.string.gujarati));
         list.add(gujrati);
 
         MenuCategory punjabi = new MenuCategory();
         punjabi.setImage(R.mipmap.img_login_background2);
-        punjabi.setmCategory("Punjabi");
+        punjabi.setmCategory("" + getText(R.string.punjabi));
         list.add(punjabi);
 
         MenuCategory chinese = new MenuCategory();
         chinese.setImage(R.mipmap.img_login_background2);
-        chinese.setmCategory("Chinese");
+        chinese.setmCategory("" + getText(R.string.chinese));
         list.add(chinese);
 
-        MenuCategory southIndian = new MenuCategory();
-        southIndian.setImage(R.mipmap.img_login_background2);
-        southIndian.setmCategory("South Indian");
-        list.add(southIndian);
+        MenuCategory pizza = new MenuCategory();
+        pizza.setImage(R.mipmap.img_login_background2);
+        pizza.setmCategory("" + getText(R.string.pizza));
+        list.add(pizza);
 
-        MenuCategory fastFood = new MenuCategory();
-        fastFood.setImage(R.mipmap.img_login_background2);
-        fastFood.setmCategory("Fast Food");
-        list.add(fastFood);
-
-        MenuCategory soup = new MenuCategory();
-        soup.setImage(R.mipmap.img_login_background2);
-        soup.setmCategory("Soup");
-        list.add(soup);
     }
 }

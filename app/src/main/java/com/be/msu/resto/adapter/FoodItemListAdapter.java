@@ -1,4 +1,4 @@
-package com.be.msu.resto.bl;
+package com.be.msu.resto.adapter;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -14,7 +14,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.be.msu.resto.R;
-import com.be.msu.resto.fragment.ViewItemDetailFragment;
+import com.be.msu.resto.fragment.FoodItemDetailFragment;
 import com.be.msu.resto.model.MenuItem;
 
 import java.util.List;
@@ -22,13 +22,17 @@ import java.util.List;
 /**
  * Created by TANKBHAI on 30-11-2016.
  */
-public class ViewMenuItemAdapter extends RecyclerView.Adapter<ViewMenuItemAdapter.ViewHolder> {
+public class FoodItemListAdapter extends RecyclerView.Adapter<FoodItemListAdapter.ViewHolder> {
 
     List<MenuItem> list;
     public Bundle bundle;
     public MenuItem menuItem;
+    private static final String CATEGORY_NAME = "categoryName";
+    private static final String ITEM_NAME = "itemName";
+    private static final String RUPEES = "Rupees";
+    private static final String RATING = "Rating";
 
-    public ViewMenuItemAdapter(List<MenuItem> menuItemList) {
+    public FoodItemListAdapter(List<MenuItem> menuItemList) {
         super();
         list = menuItemList;
     }
@@ -38,10 +42,10 @@ public class ViewMenuItemAdapter extends RecyclerView.Adapter<ViewMenuItemAdapte
         @Override
         public void onClick(View v) {
 
-            ViewItemDetailFragment viewItemDetailFragment = new ViewItemDetailFragment();
+            FoodItemDetailFragment foodItemDetailFragment = new FoodItemDetailFragment();
             final FragmentManager fragmentManager = ((AppCompatActivity) v.getContext()).getSupportFragmentManager();
             final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.home_container, viewItemDetailFragment);
+            fragmentTransaction.replace(R.id.home_container, foodItemDetailFragment);
             fragmentTransaction.commit();
 
             bundle = new Bundle();
@@ -52,12 +56,12 @@ public class ViewMenuItemAdapter extends RecyclerView.Adapter<ViewMenuItemAdapte
             TextView rupees = (TextView) ((CardView) v).findViewById(R.id.rupees);
             RatingBar ratingBar = (RatingBar) ((CardView) v).findViewById(R.id.ratingBar);
 
-            bundle.putString("categoryName", (list.get(0)).getCategory());
-            bundle.putString("itemName", itemName.getText().toString());
-            bundle.putString("Rupees", rupees.getText().toString());
-            bundle.putFloat("Rating", ratingBar.getRating());
+            bundle.putString(CATEGORY_NAME, (list.get(0)).getCategory());
+            bundle.putString(ITEM_NAME, itemName.getText().toString());
+            bundle.putString(RUPEES, rupees.getText().toString());
+            bundle.putFloat(RATING, ratingBar.getRating());
 
-            viewItemDetailFragment.setArguments(bundle);
+            foodItemDetailFragment.setArguments(bundle);
         }
     };
 
