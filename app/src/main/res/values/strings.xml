@@ -48,4 +48,10 @@
     <string name="paneer_tikka_masala">Paneer Tikka Masala</string>
     <string name="masala_bhindi">Masala Bhindi</string>
 
+    <!--Addd Order-->
+    <string name="customer_name">Customer Name</string>
+    <string name="order">Order List</string>
+    <string name="food_item">Food Item</string>
+    <string name="food_category">Category</string>
+
 </resources>
