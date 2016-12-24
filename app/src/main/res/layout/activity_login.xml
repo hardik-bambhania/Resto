@@ -1,7 +1,8 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@mipmap/img_back">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar_login"
@@ -28,6 +29,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/border_spinner"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -35,6 +37,7 @@
                 android:id="@+id/imgUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
                 android:layout_marginTop="6dp"
                 android:src="@drawable/ic_username" />
 
@@ -42,8 +45,9 @@
                 android:id="@+id/input_layout_uname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
                 android:textSize="18sp">
 
 
@@ -57,10 +61,14 @@
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/border_spinner"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -68,6 +76,7 @@
                 android:id="@+id/imgPwd"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
                 android:layout_marginTop="6dp"
                 android:src="@drawable/ic_password" />
 
@@ -75,8 +84,9 @@
                 android:id="@+id/input_layout_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
                 android:textSize="18sp">
 
                 <EditText
@@ -89,24 +99,14 @@
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
-        <!--
-                <Spinner
-                    android:id="@+id/spinner_service"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/border_spinner"
-                    android:textSize="18sp" />
-        -->
         <Button
             android:id="@+id/btn_signup"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/round_button"
-            android:padding="8dp"
-            android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:padding="8dp"
             android:text="@string/login"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
