@@ -81,13 +81,6 @@ public class HomeActivity extends AppCompatActivity {
                     mDrawerLayout.closeDrawers();
                     FoodMenuFragment foodMenuFragment = new FoodMenuFragment();
                     loadFragment(foodMenuFragment);
-                    /*foodMenuFragment.cardView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            FoodItemListFragment viewItemFragment = new FoodItemListFragment();
-                            loadFragment(viewItemFragment);
-                        }
-                    });*/
                     break;
                 case R.id.menu_feedback:
                     mDrawerLayout.closeDrawers();

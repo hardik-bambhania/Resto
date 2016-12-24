@@ -8,6 +8,9 @@ public class Order {
     private String dateTime;
     private int numberOfItem;
     private boolean isVegetarian;
+    private String name;
+    private int tableNo;
+    private String[] categoryList;
     private ArrayList<MenuItem> orderedItem;
 
     public int getId() {
@@ -16,6 +19,30 @@ public class Order {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getTableNo() {
+        return tableNo;
+    }
+
+    public void setTableNo(int tableNo) {
+        this.tableNo = tableNo;
+    }
+
+    public void setCategoryList(String[] list) {
+        categoryList = list;
+    }
+
+    public String[] getCategoryList() {
+        return categoryList;
     }
 
     public int getTotalPrice() {
